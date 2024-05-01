@@ -1,0 +1,67 @@
+body{
+    font-family: sans-serif;
+    background-color: #c1bec8;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.app{
+    width: 300px;
+    height: 500px;
+    border: 5px solid rgb(101, 3, 137);
+    border-radius: 8px;
+    padding: 14px;
+    background-color: #fff;
+    overflow-y: scroll;
+}
+
+.app::-webkit-scrollbar{
+    width: 0 !important;
+}
+
+#addNew{
+    display: flex;
+    background-color: rgb(171, 206, 161, 0.35);
+    align-items: center;
+    padding: 5px 10px;
+    justify-content: space-between;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.fa-plus{
+    background-color: #abcea1;
+    padding: 3px;
+    border-radius: 4px;
+} 
+
+#tasks{
+    display: grid;
+    gap: 14px;
+}
+
+#tasks div{
+    background-color: #e2eede;
+    border: 3px solid #abcea1;
+    padding: 5px;
+    border-radius: 6px;
+    display: grid;
+    gap: 4px;
+}
+
+.options{
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+}
+
+.options i{
+ cursor: pointer;   
+}
+
+#msg{
+    color: red;
+}
