@@ -42,7 +42,7 @@ let acceptData=() => {
 
 let createTasks=() =>{
     tasks.innerHTML ="";
-    
+
     data.map((x,y)=>{
         return     (tasks.innerHTML += `
         <div id=${y}>
@@ -63,6 +63,9 @@ resetForm();
 
 let deleteTask=(e)=>{
     e.parentElement.parentElement.remove();
+    data.splice( e.parentElement.parentElement.id, 1)
+    localStorage.setItem("data", JSON.stringify(data));
+    console.log(data);
 
 }
 
@@ -73,7 +76,7 @@ let editTask= (e)=>{
     dateInput.value = selectTask.children[1].innerHTML;
     textarea.value =  selectTask.children[2].innerHTML;
 
-    selectTask.remove();
+    deleteTask.remove();
 
 }
 
@@ -84,7 +87,7 @@ let resetForm = ()=>{
 }
 
 (()=>{
-    data =JSON.parse(localStorage.getItem("data"))
+    data =JSON.parse(localStorage.getItem("data"))  || [];
     createTasks();
     console.log(data);
 })()
