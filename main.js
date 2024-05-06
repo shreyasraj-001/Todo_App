@@ -76,7 +76,7 @@ let editTask= (e)=>{
     dateInput.value = selectTask.children[1].innerHTML;
     textarea.value =  selectTask.children[2].innerHTML;
 
-    deleteTask.remove();
+    deleteTask(e);
 
 }
 
